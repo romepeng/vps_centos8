@@ -15,7 +15,7 @@ touch nopasswd.sh-- ssh key login config
 
 
 4. install git. tmux, curl; wget, unzip, zip, gcc, svn
-install trojan (gcp )-- config_client.json-- change ssl --false
+install trojan (gcp )-- config_client.json-- change  remote server domain/passwd/ssl "verify" --false
 + proxychains-ng--config socks5 127.0.0.1:1080
 install miniconda/ conda env demo/jqdata/tspro
 
