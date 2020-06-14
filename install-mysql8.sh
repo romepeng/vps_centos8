@@ -5,15 +5,22 @@ yum -y install @mysql
 # systemctl enable --now mysqld
 # systemctl status mysqld
 #  mysql_secure_installation
-# mysql -u root -p
+
+#MySQL8.0允许外部访问
+mysql -u root -p
+show databases;
+use mysql;
+update user set host='%' where user ='root';
+
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+
+# create database demo
 mysql> create database demo;
 mysql> GRANT ALL ON demo.* TO jqdata@localhost IDENTIFIED BY 'jqdata123';
 mysql> exit
 
-#### 允许远程访问（授权给所有ip）
-mysql>CREATE USER 'root'@'%' IDENTIFIED BY 'password';
-mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'WITH GRANT OPTION;
-mysql>FLUSH PRIVILEGES;
 
 #设置防火墙
 $ firewall-cmd --zone=public --add-port=3306/tcp --permanent
