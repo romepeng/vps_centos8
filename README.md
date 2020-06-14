@@ -11,6 +11,10 @@ reboot -f
 
 2. adduser demo  /password demo/ gpasswd -d demo wheel;
 3. dnf update;
+
+dnf install firewalld -y (if firewalld not exsit)
+systemctl start firewalld/ status/enable---reboot
+
 nano /etc/ssh/sshd_config;
 firewall config: firewall-cmd --permanent --query-port=22/tcp/ firewall-cmd --reload
 touch nopasswd.sh-- ssh key login config
