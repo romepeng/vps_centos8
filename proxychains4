@@ -1,0 +1,31 @@
+# proxychains-ng
+git clone https://github.com/rofl0r/proxychains-ng.git
+cd proxychains-ng
+./configure
+make && make install
+cp ./src/proxychains.conf /etc/proxychians.conf
+
+or
+*** Installation ***
+
+  # needs a working C compiler, preferably gcc
+  ./configure --prefix=/usr --sysconfdir=/etc
+  make
+  [optional] sudo make install
+  [optional] sudo make install-config (installs proxychains.conf)
+
+  if you dont install, you can use proxychains from the build directory
+  like this: ./proxychains4 -f src/proxychains.conf telnet google.com 80
+  
+  config: src/proxychains.conf--- add in [ProxyList]
+  socks5 127.0.0.0 1080
+  
+  
+*** use ***
+proxychains4 command
+set:
+proxychains4 -q /bin/bash
+ *** test***
+ proxychains4 curl ip.gs -- put proxy server ip.
+ 
+
