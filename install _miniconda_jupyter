@@ -1,0 +1,6 @@
+#Install and Configure Jupyter Notebook on CentOS 8
+# <https://linuxhint.com/install_jupyter_notebook_centos8/> 
+pip3 install --user jupyter
+export PATH=~/.local/bin:$PATH
+jupyter-notebook  --allow-root --ip='0.0.0.0'
+#from  <https://stackoverflow.com/questions/35313876/after-installing-with-pip-jupyter-command-not-found> 
