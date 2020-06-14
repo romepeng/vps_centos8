@@ -1,4 +1,6 @@
 # vps_centos8
+if change OS, please stop vps first;
+
 config centos8 on aliyun 
 
 1. login by root passwd;
