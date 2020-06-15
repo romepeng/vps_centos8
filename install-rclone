@@ -1,0 +1,16 @@
+#!/bin/bash
+sudo yum install fuse
+fusermount -V
+
+curl https://rclone.org/install.sh | sudo bash
+rclone config
+# rclone config show
+# rclone --help
+
+
+mkdir -p /home/onedriveb
+
+rclone mount onedriveb: /home/onedriveb --allow-other --allow-non-empty --vfs-cache-mode writes
+
+# unmount
+fusermount -qzu /home/onedriveb
