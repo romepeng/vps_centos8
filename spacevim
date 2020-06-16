@@ -1,0 +1,25 @@
+# https://spacevim.org/quick-start-guide/
+procxychains4 curl -sLf https://spacevim.org/install.sh | bash
+#Use Vim as a Python IDE
+ ~/.SpaceVim.d/init.toml
+ [[layers]]
+ name = "lang#python"
+ [[layers]]
+ name = "lang#javascript"
+ 
+ pip install --user flake8  isort yapf
+ pip install neovim
+ npm install -g eslint-cli
+ 
+ you can add a .project_alt.json to the root of your project with following content:
+
+{
+  "src/*.py": {"alternate": "test/{}.py"},
+  "test/*.py": {"alternate": "src/{}.py"}
+}
+ 
+ add a .project_alt.json to the root of your project with following content:
+ {
+  "src/*.js": {"alternate": "test/{}.js"},
+  "test/*.js": {"alternate": "src/{}.js"}
+}
