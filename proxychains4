@@ -19,7 +19,11 @@ or
   
   config: src/proxychains.conf--- add in [ProxyList]
   socks5 127.0.0.0 1080
-  
+ 
+ or install:
+ sudo apt search proxychains
+ # proxychains4
+ sudo apt install proxychains4
   
 *** use ***
 proxychains4 command
